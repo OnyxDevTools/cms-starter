@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "cms-starter",
+  "name": "CMS Starter",
+  "description": "An Onyx-backed editorial CMS with drafts, revisions, media, role-based publishing and a server-rendered SEO website.",
+  "tags": ["nextjs", "typescript", "cms", "seo", "onyx"],
+  "useWhen": [
+    "A single public website needs a self-hosted editorial CMS, strong technical SEO and Onyx persistence"
+  ],
+  "avoidWhen": [
+    "The primary product is an admin dashboard or a different framework/database is required"
+  ],
+  "capabilities": [
+    "Pages and posts with private working drafts and immutable revisions",
+    "Server-enforced administrator, editor and author roles",
+    "Lexical rich text and tables; static public rendering",
+    "Onyx document media with owner and public visibility checks",
+    "Content-referenced navigation and editable site settings",
+    "Server-rendered metadata, canonical URLs, JSON-LD, feeds and sharded sitemaps"
+  ],
+  "notIncluded": [
+    "Hosted CMS",
+    "Paid editor extensions",
+    "Scheduling or real-time collaboration",
+    "Billing",
+    "Hosting adapter"
+  ],
+  "preview": {
+    "image": "public/template-preview.png",
+    "route": "/"
+  },
+  "runtime": {
+    "node": ">=24.12.0",
+    "install": "npm ci",
+    "develop": "npm run dev -- --port <assigned-port>",
+    "build": "npm run build",
+    "start": "npm run start -- --port <assigned-port>",
+    "healthPath": "/api/health",
+    "readinessPath": "/api/ready",
+    "requiredEnvironment": [
+      "Existing Onyx downloaded configuration via SDK resolver",
+      "Application Firebase client/Admin settings",
+      "Controlled active CMS administrator grant"
+    ]
+  },
+  "initialize": "npm run template:init -- --name <project-name> --slug <project-slug>",
+  "instructions": "README.md"
+}

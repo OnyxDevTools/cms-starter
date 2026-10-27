@@ -1,0 +1,9 @@
+node_modules
+.next
+.next-analyze
+reports
+.test-runtime
+test-results
+playwright-report
+package-lock.json
+public/fonts/LICENSE

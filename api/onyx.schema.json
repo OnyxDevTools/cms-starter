@@ -1,0 +1,1047 @@
+{
+  "tables": [
+    {
+      "name": "CMSUser",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "email",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "role",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "active",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "createdAt",
+          "type": "Timestamp",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "role",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Taxonomy",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "kind",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "slug",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "archived",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "kind",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "WorkingDraft",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "contentType",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "authorName",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "actorUid",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "action",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "publishedAt",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "canonicalPath",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "socialMediaId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "terms",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "pageId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "summary",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "layout",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "seoTitle",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "seoDescription",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "indexable",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "heroMediaId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "toc",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "documentVersion",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "createdAt",
+          "type": "Timestamp",
+          "isNullable": false
+        },
+        {
+          "name": "nodeSetId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "contentType",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "actorUid",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "pageId",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "DraftNode",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "revisionId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "parentId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "position",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "kind",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "textFormat",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "align",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "indent",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "tag",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "listType",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "start",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "language",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "mediaId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "alt",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "headerState",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "colSpan",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "rowSpan",
+          "type": "Int",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "revisionId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "kind",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Activity",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "pageId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "actorUid",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "actorName",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "action",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "createdAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "pageId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "actorUid",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "PageLock",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "ownerToken",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "createdAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Page",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "ownerUid",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "archived",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "draftRevisionId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "publishedRevisionId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "previousPublishedRevisionId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "editToken",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "publicationToken",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "createdAt",
+          "type": "Timestamp",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ownerUid",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "PageRevision",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "contentType",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "authorName",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "actorUid",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "action",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "publishedAt",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "canonicalPath",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "socialMediaId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "terms",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "pageId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "title",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "summary",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "layout",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "seoTitle",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "seoDescription",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "indexable",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "heroMediaId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "toc",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "documentVersion",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "createdAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "contentType",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "actorUid",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "pageId",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "PageNode",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "revisionId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "parentId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "position",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "kind",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "text",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "textFormat",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "align",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "indent",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "tag",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "url",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "listType",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "start",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "language",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "mediaId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "alt",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "headerState",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "colSpan",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "rowSpan",
+          "type": "Int",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "revisionId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "kind",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Route",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "pageId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "createdAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "pageId",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "PublicationPath",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "revisionId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "revisionId",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "SiteSettings",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "description",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "origin",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "organizationName",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "organizationURL",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "logoMediaId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "socialMediaId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "footerText",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "updatedAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "NavigationLink",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "pageId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "position",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "location",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "enabled",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "label",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "path",
+          "type": "String",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "pageId",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    },
+    {
+      "name": "Media",
+      "type": "DEFAULT",
+      "identifier": {
+        "name": "id",
+        "type": "String",
+        "generator": "None"
+      },
+      "attributes": [
+        {
+          "name": "id",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "ownerPageId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "ownerUid",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "caption",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "deleted",
+          "type": "Boolean",
+          "isNullable": false
+        },
+        {
+          "name": "documentId",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "width",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "height",
+          "type": "Int",
+          "isNullable": false
+        },
+        {
+          "name": "mime",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "alt",
+          "type": "String",
+          "isNullable": false
+        },
+        {
+          "name": "createdAt",
+          "type": "Timestamp",
+          "isNullable": false
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ownerPageId",
+          "type": "DEFAULT"
+        },
+        {
+          "name": "ownerUid",
+          "type": "DEFAULT"
+        }
+      ],
+      "resolvers": [],
+      "triggers": []
+    }
+  ]
+}
